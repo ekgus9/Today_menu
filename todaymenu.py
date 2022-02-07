@@ -86,7 +86,7 @@ def random_menu():
 
     factor = factor.split('\n')
     
-    rm = random.choice(factor)
+    rm = random.choice(factor).strip()
     
     res = {
         "version": "2.0",
@@ -102,7 +102,7 @@ def random_menu():
                        "buttons": [
                            {
                                "action": "webLink",
-                               "label": "주변 " + random.choice(factor) + "맛집 검색하기!",
+                               "label": rm + " 맛집 검색하기!",
                                "webLinkUrl": "https://map.naver.com/v5/search/" + rm
                            }            
                         ]
