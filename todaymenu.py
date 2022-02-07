@@ -1,4 +1,4 @@
-#import random
+import random
 from flask import Flask
 
 todaymenu = Flask(__name__)
@@ -86,8 +86,8 @@ def random_menu():
 
     factor = factor.split('\n')
 
-    #random.choice(factor)
-    return 'a'
+    
+    return random.choice(factor)
                           
 if __name__ == '__main__':
     todaymenu.run(host='0.0.0.0',port=5000,debug=True)
