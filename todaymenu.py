@@ -90,4 +90,4 @@ def random_menu():
     return 'a'
                           
 if __name__ == '__main__':
-    todaymenu.run(host='0.0.0.0',port=5000)
+    todaymenu.run(host='0.0.0.0',port=5000,debug=True)
