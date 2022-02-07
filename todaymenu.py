@@ -86,7 +86,7 @@ def random_menu():
 
     factor = factor.split('\n')
 
-    print(random.choice(factor))
+    return random.choice(factor)
 
 if __name__ == '__main__':
     todaymenu.run(host='0.0.0.0',port=5000)
