@@ -1,9 +1,9 @@
 import random
-from flask import Flask
+from flask import Flask, jsonify
 
 todaymenu = Flask(__name__)
 
-@todaymenu.route('/') #/random_menu',methods=['POST'])
+@todaymenu.route('/random_menu',methods=['POST'])
 def random_menu():
     factor = '''라면
     김밥
@@ -85,9 +85,34 @@ def random_menu():
     뷔페'''
 
     factor = factor.split('\n')
-
     
-    return random.choice(factor)
+    rm = random.choice(factor)
+    
+    res = {
+        "version": "2.0",
+        "template": {
+            "outputs": [
+                {
+                   "basicCard": {
+                       "title": "",
+                       "description": '오늘은 ☠️' + rm + '☠️',
+                       "thumbnail": {
+                           "imageUrl": ""
+                       },
+                       "buttons": [
+                           {
+                               "action": "webLink",
+                               "label": "주변 " + random.choice(factor) + "맛집 검색하기!",
+                               "webLinkUrl": "https://map.naver.com/v5/search/" + rm
+                           }            
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+    
+    return jsonify(res)
                           
 if __name__ == '__main__':
     todaymenu.run(host='0.0.0.0',port=5000,debug=True)
