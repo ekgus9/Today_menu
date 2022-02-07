@@ -88,27 +88,34 @@ def random_menu():
     
     rm = random.choice(factor).strip()
     
+#     res = {
+#         "version": "2.0",
+#         "template": {
+#             "outputs": [
+#                 {
+#                    "basicCard": {
+#                        "title": "",
+#                        "description": '오늘은 ☠️' + rm + '☠️',
+#                        "thumbnail": {
+#                            "imageUrl": ""
+#                        },
+#                        "buttons": [
+#                            {
+#                                "action": "webLink",
+#                                "label": rm + " 맛집 검색하기!",
+#                                "webLinkUrl": "https://map.naver.com/v5/search/" + rm
+#                            }            
+#                         ]
+#                     }
+#                 }
+#             ]
+#         }
+#     }
+
     res = {
-        "version": "2.0",
-        "template": {
-            "outputs": [
-                {
-                   "basicCard": {
-                       "title": "",
-                       "description": '오늘은 ☠️' + rm + '☠️',
-                       "thumbnail": {
-                           "imageUrl": ""
-                       },
-                       "buttons": [
-                           {
-                               "action": "webLink",
-                               "label": rm + " 맛집 검색하기!",
-                               "webLinkUrl": "https://map.naver.com/v5/search/" + rm
-                           }            
-                        ]
-                    }
-                }
-            ]
+        "version" : "2.0",
+        "data" : {
+            "rm" : rm
         }
     }
     
