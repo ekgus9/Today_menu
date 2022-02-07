@@ -3,7 +3,7 @@ from flask import Flask
 
 todaymenu = Flask(__name__)
 
-@todaymenu.route('/random_menu',methods=['POST])
+@todaymenu.route('/random_menu',methods=['POST'])
 def random_menu():
     factor = '''라면
     김밥
