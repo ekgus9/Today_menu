@@ -1,4 +1,4 @@
-![KakaoTalk_20220207_191010669](https://user-images.githubusercontent.com/89879599/152787811-b3805753-05bf-4b13-af2a-69da449791d9.png)
+![image](https://user-images.githubusercontent.com/89879599/152792028-a11dcfd1-f3a7-4c38-996c-c29d0f97517a.png)
 
 
 
@@ -22,7 +22,7 @@
 
 
 
-python, flask, kakao i open builder, aws ec2
+Python, Flask, Kakao I Open Builder, AWS Ec2
 
 
 
